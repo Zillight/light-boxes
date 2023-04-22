@@ -8,11 +8,16 @@ export default function Box(props){
         backgroundColor: on ? "#222222" : "transparent"
       }
 
-    function toggle(){
-       setOn(prevOn => !prevOn) 
-   }  
+//     function toggle(){
+//        setOn(prevOn => !prevOn) 
+//    }  
 
     return(
-        <div style={styles} className="boxes" onClick={toggle}></div>
+        <div 
+        style={styles} 
+        className="boxes" 
+        onClick={props.handleClick}
+        >
+        </div>
     )
 }
