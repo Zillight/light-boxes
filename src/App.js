@@ -6,7 +6,7 @@ function App(props) {
   const [squares, setSquares] = useState(boxes)
 
   const styles = {
-    backgroundColor: "black"
+    backgroundColor: props.darkmode ? "black" : "transparent"
   }
 
   const boxElements = squares.map(box => (
