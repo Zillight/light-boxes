@@ -6,15 +6,19 @@ import Box from "./Components/Box"
 function App() {
   const [squares, setSquares] = useState(boxes)
 
-  function toggle(){
-    console.log("Clicked!")
+  function toggle(id){
+    setSquares(prevSquare => {
+      return prevSquare.map((square) => {
+        return square.id === id ? {...square, on: !square.on} : square
+      })
+    })
   }
 
   const boxElements = squares.map(box => (
     <Box 
     key={box.id}
     on={box.on}
-    handleClick={toggle}
+    handleClick={()=>toggle(box.id)}
     />
   ))
   return (
