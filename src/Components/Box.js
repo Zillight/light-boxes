@@ -11,8 +11,8 @@ export default function Box(props){
         <div 
         style={styles} 
         className="boxes" 
-        onMouseOver={props.handleClick}
         onClick={props.handleClick}
+        onMouseOver={props.handleClick}
         >
         </div>
     )
