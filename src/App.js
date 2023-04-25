@@ -21,6 +21,8 @@ function App() {
     handleClick={()=>toggle(box.id)}
     />
   ))
+
+  
   return (
     <div 
     className="App"
